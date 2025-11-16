@@ -1,4 +1,6 @@
 function convertToRoman(num) {
+    num = Number(num);   // IMPORTANT FIX
+
     if (num === 0) return "";
 
     const symbols = [
