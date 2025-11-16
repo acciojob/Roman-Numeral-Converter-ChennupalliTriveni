@@ -1,5 +1,5 @@
 function convertToRoman(num) {
-    if (num === 0) return ""; // Usually no Roman numeral for 0
+    if (num === 0) return "";  // No Roman numeral for 0
 
     const symbols = [
         ["M", 1000],
@@ -28,3 +28,7 @@ function convertToRoman(num) {
     return roman;
 }
 
+function showRoman() {
+    let num = parseInt(document.getElementById("number").value);
+    document.getElementById("result").innerText = convertToRoman(num);
+}
