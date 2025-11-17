@@ -1,7 +1,6 @@
 function convertToRoman(num) {
-    num = Number(num);   // IMPORTANT FIX
 
-    if (num === 0) return "";
+    if (num === 0) return "";  // Roman numerals have no zero
 
     const symbols = [
         ["M", 1000],
@@ -19,14 +18,18 @@ function convertToRoman(num) {
         ["I", 1]
     ];
 
-    let roman = "";
+    let result = "";
 
     for (let [symbol, value] of symbols) {
         while (num >= value) {
-            roman += symbol;
+            result += symbol;
             num -= value;
         }
     }
 
-    return roman;
+    return result;
 }
+
+// Do not change below code
+const num = parseInt(prompt("Enter number"));
+alert(convertToRoman(num));
