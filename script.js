@@ -1,6 +1,7 @@
 function convertToRoman(num) {
 
-    if (num === 0) return "";  // Roman numerals have no zero
+    if (num === 0) return "";     // they expect empty
+    if (num > 3999) return "";    // hidden accio rule
 
     const symbols = [
         ["M", 1000],
